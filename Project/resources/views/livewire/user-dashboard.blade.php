@@ -6,7 +6,7 @@
         </h1>
     </div>
     <div class="px-3 py-4 flex justify-center">
-        <table class="w-full text-md bg-gray-800 shadow-md rounded mb-4">
+        <table class="w-full text-md bg-gray-800 shadow-md rounded-sm mb-4">
             <tbody>
                 <tr class="border-b border-gray-700">
                     <th class="text-left p-3 px-5">Name</th>
@@ -32,12 +32,12 @@
                     </td>
                     <td class="p-3 px-5 flex justify-center">
                         <button type="button" id="submitButton{{$user->id}}" data-id="{{$user->id}}"
-                            class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">Save</button>
+                            class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded-sm focus:outline-hidden focus:shadow-outline">Save</button>
                         <form action="/users/{{$user->id}}" method="POST" class="inline">
                             @method('DELETE')
                             @csrf
                             <button type="submit"
-                                class="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">Delete</button>
+                                class="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded-sm focus:outline-hidden focus:shadow-outline">Delete</button>
                         </form>
                     </td>
                 </tr>

@@ -48,10 +48,10 @@
 
     $buttonClasses = \Illuminate\Support\Arr::toCssClasses([
         ...[
-            'fi-btn relative grid-flow-col items-center justify-center font-semibold outline-none transition duration-75 focus-visible:ring-2',
+            'fi-btn relative grid-flow-col items-center justify-center font-semibold outline-hidden transition duration-75 focus-visible:ring-2',
             'pointer-events-none opacity-70' => $disabled,
             'rounded-lg' => ! $grouped,
-            'flex-1 [&:nth-child(1_of_.fi-btn)]:rounded-s-lg [&:nth-last-child(1_of_.fi-btn)]:rounded-e-lg [&:not(:nth-child(1_of_.fi-btn))]:shadow-[-1px_0_0_0_theme(colors.gray.200)] [&:not(:nth-last-child(1_of_.fi-btn))]:me-px dark:[&:not(:nth-child(1_of_.fi-btn))]:shadow-[-1px_0_0_0_theme(colors.white/20%)]' => $grouped,
+            'flex-1 nth-[1_of_.fi-btn]:rounded-s-lg nth-last-[1_of_.fi-btn]:rounded-e-lg not-nth-[1_of_.fi-btn]:shadow-[-1px_0_0_0_var(--color-gray-200)] not-nth-last-[1_of_.fi-btn]:me-px dark:not-nth-[1_of_.fi-btn]:shadow-[-1px_0_0_0_--theme(--color-white/20%)]' => $grouped,
             'cursor-pointer' => $tag === 'label',
             match ($color) {
                 'gray' => 'fi-color-gray',
@@ -90,7 +90,7 @@
                     },
                 ] :
                 [
-                    'shadow-sm' => ! $grouped,
+                    'shadow-xs' => ! $grouped,
                     'bg-white text-gray-950 hover:bg-gray-50 dark:bg-white/5 dark:text-white dark:hover:bg-white/10' => ($color === 'gray') || ($tag === 'label'),
                     'ring-1 ring-gray-950/10 dark:ring-white/20' => (($color === 'gray') || ($tag === 'label')) && (! $grouped),
                     'bg-custom-600 text-white hover:bg-custom-500 focus-visible:ring-custom-500/50 dark:bg-custom-500 dark:hover:bg-custom-400 dark:focus-visible:ring-custom-400/50' => ($color !== 'gray') && ($tag !== 'label'),
@@ -120,7 +120,7 @@
         '[:checked+*>&]:text-white' => $tag === 'label',
     ]);
 
-    $badgeContainerClasses = 'fi-btn-badge-ctn absolute -top-1 start-full z-[1] -ms-1 w-max -translate-x-1/2 rounded-md bg-white rtl:translate-x-1/2 dark:bg-gray-900';
+    $badgeContainerClasses = 'fi-btn-badge-ctn absolute -top-1 start-full z-1 -ms-1 w-max -translate-x-1/2 rounded-md bg-white rtl:translate-x-1/2 dark:bg-gray-900';
 
     $labelClasses = \Illuminate\Support\Arr::toCssClasses([
         'fi-btn-label',

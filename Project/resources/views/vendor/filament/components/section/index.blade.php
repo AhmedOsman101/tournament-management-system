@@ -47,7 +47,7 @@
             'fi-section',
             match ($aside) {
                 true => 'fi-aside grid grid-cols-1 items-start gap-x-6 gap-y-4 md:grid-cols-3',
-                false => 'rounded-xl bg-white shadow-sm ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10',
+                false => 'rounded-xl bg-white shadow-xs ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10',
             },
         ])
     }}
@@ -148,7 +148,7 @@
         <div
             @class([
                 'fi-section-content',
-                'rounded-xl bg-white shadow-sm ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10' => $aside,
+                'rounded-xl bg-white shadow-xs ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10' => $aside,
                 match ($compact) {
                     true => 'p-4',
                     false => 'p-6',

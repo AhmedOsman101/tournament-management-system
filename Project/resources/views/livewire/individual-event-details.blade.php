@@ -7,7 +7,7 @@
     @endphp
     <div class="container px-5 py-16 mx-auto">
         <div class="lg:w-4/5 mx-auto flex flex-wrap">
-            <img alt="ecommerce" class="lg:w-1/2 w-full object-cover object-center rounded border border-gray-800"
+            <img alt="ecommerce" class="lg:w-1/2 w-full object-cover object-center rounded-sm border border-gray-800"
                 src="{{ asset('img/event.jpg') }}">
             <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
                 <h1 class="text-white text-3xl title-font font-medium mb-1">{{$event->name}}</h1>
@@ -20,7 +20,7 @@
                         <span class="mr-3">Joined As</span>
                         <div class="relative">
                             <select id="join-select"
-                                class="rounded border appearance-none bg-gray-800 border-gray-800 py-2 focus:outline-none focus:border-red-500 text-base pl-3 pr-10 disabled:opacity-50"
+                                class="rounded-sm border appearance-none bg-gray-800 border-gray-800 py-2 focus:outline-hidden focus:border-red-500 text-base pl-3 pr-10 disabled:opacity-50"
                                 disabled>
                                 <option value="team" {{ $event->type == 'team' ? 'selected' : '' }}>Team</option>
                                 <option value="individual" {{ $event->type == 'individual' ? 'selected' : ''
@@ -39,7 +39,7 @@
                 <div class="flex flex-col gap-4">
                     <div id="individual-selection" class="flex">
                         <button
-                            class="flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">Join
+                            class="flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-hidden hover:bg-red-600 rounded-sm">Join
                             Now as Individual</button>
                     </div>
                 </div>

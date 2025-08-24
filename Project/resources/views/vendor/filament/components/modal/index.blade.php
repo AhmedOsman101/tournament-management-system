@@ -180,11 +180,11 @@
                         MaxWidth::MaxContent => 'max-w-max',
                         MaxWidth::FitContent => 'max-w-fit',
                         MaxWidth::Prose => 'max-w-prose',
-                        MaxWidth::ScreenSmall => 'max-w-screen-sm',
-                        MaxWidth::ScreenMedium => 'max-w-screen-md',
-                        MaxWidth::ScreenLarge => 'max-w-screen-lg',
-                        MaxWidth::ScreenExtraLarge => 'max-w-screen-xl',
-                        MaxWidth::ScreenTwoExtraLarge => 'max-w-screen-2xl',
+                        MaxWidth::ScreenSmall => 'max-w-(--breakpoint-sm)',
+                        MaxWidth::ScreenMedium => 'max-w-(--breakpoint-md)',
+                        MaxWidth::ScreenLarge => 'max-w-(--breakpoint-lg)',
+                        MaxWidth::ScreenExtraLarge => 'max-w-(--breakpoint-xl)',
+                        MaxWidth::ScreenTwoExtraLarge => 'max-w-(--breakpoint-2xl)',
                         MaxWidth::Screen => 'fixed inset-0',
                         default => $width,
                     },
@@ -293,7 +293,7 @@
                         @class([
                             'fi-modal-content flex flex-col gap-y-4 py-6',
                             'flex-1' => ($width === MaxWidth::Screen) || $slideOver,
-                            'pe-6 ps-[5.25rem]' => $icon && ($alignment === Alignment::Start),
+                            'pe-6 ps-21' => $icon && ($alignment === Alignment::Start),
                             'px-6' => ! ($icon && ($alignment === Alignment::Start)),
                         ])
                     >
@@ -305,7 +305,7 @@
                     <div
                         @class([
                             'fi-modal-footer w-full',
-                            'pe-6 ps-[5.25rem]' => $icon && ($alignment === Alignment::Start) && ($footerActionsAlignment !== Alignment::Center) && (! $stickyFooter),
+                            'pe-6 ps-21' => $icon && ($alignment === Alignment::Start) && ($footerActionsAlignment !== Alignment::Center) && (! $stickyFooter),
                             'px-6' => ! ($icon && ($alignment === Alignment::Start) && ($footerActionsAlignment !== Alignment::Center) && (! $stickyFooter)),
                             'fi-sticky sticky bottom-0 border-t border-gray-200 bg-white py-5 dark:border-white/10 dark:bg-gray-900' => $stickyFooter,
                             'rounded-b-xl' => $stickyFooter && ! ($slideOver || ($width === MaxWidth::Screen)),

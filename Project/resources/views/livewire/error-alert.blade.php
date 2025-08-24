@@ -1,5 +1,5 @@
 <!-- Danger -->
-<div id="errorAlert" class="px-6 py-4 mt-2 bg-red-400 text-white flex justify-between rounded">
+<div id="errorAlert" class="px-6 py-4 mt-2 bg-red-400 text-white flex justify-between rounded-sm">
     <div class="flex items-center">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-6" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd"

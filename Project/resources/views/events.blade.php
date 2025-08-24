@@ -8,7 +8,7 @@ $path = $path[count($path) - 1]
 <div class="flex flex-col">
     {{-- Links container --}}
     <div class="w-90 flex justify-center pt-20">
-        <div class="inline-flex rounded-md shadow-sm">
+        <div class="inline-flex rounded-md shadow-xs">
             @switch($path)
             @case('events')
             <a href="/events"

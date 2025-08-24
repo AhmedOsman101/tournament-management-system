@@ -12,10 +12,10 @@
             Showcase your skills in a variety of events and claim victory. Whether you're an individual competitor or
             part of a team, this is your chance to shine.
         </p>
-        <div class="lg:mt-0 lg:flex-shrink-0">
-            <div class="mt-12 inline-flex rounded-md shadow">
+        <div class="lg:mt-0 lg:shrink-0">
+            <div class="mt-12 inline-flex rounded-md shadow-sm">
                 <button type="button"
-                    class="py-4 px-6 bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg">
+                    class="py-4 px-6 bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-hidden focus:ring-2 focus:ring-offset-2 rounded-lg">
                     <a href="{{url('/events')}}">Register Now</a>
                 </button>
             </div>
